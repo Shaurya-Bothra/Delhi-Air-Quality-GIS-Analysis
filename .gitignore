@@ -1,0 +1,12 @@
+# Large raster files
+Data/raw/WorldCover_2021.tif
+GIS/WorldCover_UTM43N.tif
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# QGIS temporary files
+*.qgz~
+*.qgs~
