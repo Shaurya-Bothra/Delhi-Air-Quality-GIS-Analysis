@@ -534,8 +534,8 @@ around Dwarka during 18--25 October 2025.
 The 5 km Dwarka study area is predominantly built-up: built-up land
 accounts for **59.81%** of the valid classified area. Tree cover
 accounts for **17.26%**, followed by cropland (**9.62%**) and grassland
-(**6.31%**). The remaining classes---bare/sparse vegetation, shrubland,
-water and herbaceous wetland---occupy smaller shares.
+(**6.31%**). The remaining classes bare/sparse vegetation, shrubland,
+water and herbaceous wetland occupy smaller shares.
 
 This land-cover composition indicates a highly urbanised study area with
 a smaller but meaningful share of vegetated and agricultural cover.
@@ -547,7 +547,7 @@ built-up area on pollutant concentrations. The map describes the
 setting; it does not by itself prove the source of pollution.
 
 The DEM, slope and hillshade provide additional information about
-elevation and terrain. The elevation range is 181--273 m, with a mean of
+elevation and terrain. The elevation range is 181-273 m, with a mean of
 about 219.98 m. These products help document the physical geography of
 the area, but no dispersion modelling was conducted. Therefore, the
 project cannot conclude that a particular slope or elevation pattern
@@ -562,14 +562,14 @@ PM10 were positively correlated at all three stations, indicating that
 fine and broader particulate concentrations tended to rise and fall
 together.
 
-The daily plots show high particulate levels around 20--21 October, but
+The daily plots show high particulate levels around 20-21 October, but
 the timing and magnitude differ by station. Dwarka's daily PM2.5 and
 PM10 means peak on 21 October, whereas IGI and NSIT reach their daily
 PM2.5 peaks on 20 October. NSIT also records the highest daily PM10 mean
 on 20 October. Diwali occurred on 20 October 2025, making it relevant
-temporal context, but the eight-day observational record cannot
+temporal context, but the eight day observational record cannot
 establish that fireworks caused the peaks. The pattern is not a uniform
-post-event decline across all stations.
+post event decline across all stations.
 
 ### What the weather analysis suggests
 
