@@ -527,7 +527,7 @@ station-distance output and optional 1 km station-buffer layers.
 This project combines land-cover mapping, terrain preparation,
 station-based pollution observations and meteorological analysis to
 describe the environmental context and short-term air-quality variation
-around Dwarka during 18--25 October 2025.
+around Dwarka during Diwali 18-25 October 2025.
 
 ### What the GIS results tell us
 
@@ -556,7 +556,7 @@ increased or reduced the measured pollution.
 ### What the monitoring data tell us
 
 Across the three stations, Dwarka recorded the highest mean PM2.5
-(**169.19 µg/m³**) and PM10 (**371.92 µg/m³**) during the eight-day
+(**169.19 µg/m³**) and PM10 (**371.92 µg/m³**) during the eight day
 period. IGI recorded the highest mean NO2 (**126.95 µg/m³**). PM2.5 and
 PM10 were positively correlated at all three stations, indicating that
 fine and broader particulate concentrations tended to rise and fall
@@ -626,13 +626,6 @@ modelling would be needed for stronger causal conclusions.
 ------------------------------------------------------------------------
 
 ## 12. Project folder organisation
-
-The following structure is the intended organisation. Preserve the
-actual filenames used in the folders and update notebook paths if
-filenames or locations are changed.
-
-``` text
-Diwali_AQ/
 ├── README.md
 └── QGIS/
     ├── GIS_Analysis.qgz
@@ -643,77 +636,35 @@ Diwali_AQ/
         │   ├── Dwarka.tif
         │   └── ESA WorldCover 2021 source raster
         │
-        ├── processed/
-        │   ├── Data_Preprocessing.ipynb
-        │   ├── Air_Quality_Analysis.ipynb
-        │   ├── cleaned station CSV files
-        │   ├── combined air-quality and weather CSV files
-        │   └── derived DEM, slope and hillshade rasters
-        │
-        ├── GIS/
-        │   ├── Stations.gpkg
-        │   ├── Stations.csv
-        │   ├── Dwarka_5km_Boundary.gpkg
-        │   ├── WorldCover_UTM43N.tif
-        │   ├── DEM_30m.tif
-        │   ├── DEM_5km.tif
-        │   ├── Slope.tif
-        │   └── Hillshade.tif
-        │
-        ├── GIS_optional/
-        │   ├── LULC_Final.gpkg
-        │   ├── Station_Buffers_1km.gpkg
-        │   ├── Station_Distances.gpkg
-        │   ├── LULC_Stats.csv
-        │   └── WC_Stations_Clipped.tif
-        │
-        └── Results/
-            ├── figures/
-            ├── maps/
-            └── tables/
+        └── processed/
+            ├── Data_Preprocessing.ipynb
+            ├── Air_Quality_Analysis.ipynb
+            ├── cleaned station CSV files
+            ├── combined air-quality and weather CSV files
+            └── derived DEM, slope and hillshade rasters
+        
+    ├── GIS/
+    │   ├── Stations.gpkg
+    │   ├── Stations.csv
+    │   ├── Dwarka_5km_Boundary.gpkg
+    │   ├── WorldCover_UTM43N.tif
+    │   ├── DEM_30m.tif
+    │   ├── DEM_5km.tif
+    │   ├── Slope.tif
+    │   └── Hillshade.tif
+    │
+    ├── GIS_optional/
+    │   ├── LULC_Final.gpkg
+    │   ├── Station_Buffers_1km.gpkg
+    │   ├── Station_Distances.gpkg
+    │   ├── LULC_Stats.csv
+    │   └── WC_Stations_Clipped.tif
+    │
+    └── Results/
+        ├── figures/
+        ├── maps/
+        └── tables/
 ```
-
-### Important file and path notes
-
--   Keep the original downloaded data in `raw/`; keep cleaned and
-    combined CSVs in `processed/`.
--   Keep the QGIS project file (`GIS_Analysis.qgz`) in the `QGIS/`
-    folder.
--   Keep `.aux.xml` sidecar files beside their corresponding TIFF
-    rasters.
--   The station-buffer GeoPackage and its statistics are optional
-    supporting outputs, not the main 5 km land-cover summary.
--   `WC_Stations_Clipped.tif` should only be described as a 5 km clip
-    after its extent has been verified in QGIS.
--   The final exported map PDF belongs in `Results/maps/`; figures
-    belong in `Results/figures/`; result CSVs and elevation/land-cover
-    summary tables belong in `Results/tables/`.
-
-### Notebook path checks before execution
-
-The current preprocessing notebook expects the following raw
-filenames: - `Dwarka_Diwali.csv` - `IGI_Diwali.csv` -
-`NSIT_Diwali.csv` - `IGI_IMD.csv`
-
-It writes cleaned files using the names `Dwarka_Clean.csv`,
-`IGI_Clean.csv`, `NSIT_Clean.csv`, `IMD_Clean.csv` and
-`AirQuality_AllStations.csv`.
-
-The current analysis notebook expects: - `AirQuality_AllStations.csv` -
-`IMD_Clean.csv`
-
-It writes `AirQuality_Weather_Combined.csv` into the notebook working
-directory and writes figures/tables to a sibling `Results/` folder. If
-the actual files have been renamed (for example, `AirQuality_All.csv` or
-`Weather_Clean.csv`), update the notebook's `AIR_FILE` and `IMD_FILE`
-variables before running it. Do not assume the notebooks will run
-unchanged after file renaming or folder rearrangement.
-
-The analysis notebook's final heatmap cell uses Seaborn (`sns`); ensure
-`import seaborn as sns` is included in the imports cell before executing
-that cell.
-
-------------------------------------------------------------------------
 
 ## 13. Limitations
 
@@ -744,27 +695,3 @@ that cell.
     land-cover result.
 
 ------------------------------------------------------------------------
-
-## 14. Reproducibility checklist
-
-Before treating the project as final:
-
--   [ ] Confirm the raw CPCB and Meteostat filenames match the
-    preprocessing notebook.
--   [ ] Confirm the cleaned CSV filenames match the analysis notebook.
--   [ ] Update notebook input/output paths after any folder or filename
-    changes.
--   [ ] Run the preprocessing notebook from the intended working
-    directory.
--   [ ] Run the analysis notebook and confirm figures and tables are
-    regenerated.
--   [ ] Verify the extent and CRS of the 5 km boundary and land-cover
-    raster in QGIS.
--   [ ] Reconnect any moved layers in `GIS_Analysis.qgz` and save the
-    QGIS project.
--   [ ] Confirm the exported LULC map and all figures/tables are present
-    in `Results/`.
--   [ ] Keep missing observations as missing; do not replace them with
-    zero.
--   [ ] Preserve source attribution and check provider terms before
-    redistributing downloaded datasets.
