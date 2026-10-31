@@ -490,57 +490,31 @@ a particular emitting location.
 
 The project produces the following visual and tabular outputs.
 
-### Figures
+## Figures
 
-  ---------------------------------------------------------------------------------
-  Figure                                        What it shows
-  --------------------------------------------- -----------------------------------
-  `Daily_PM25_Trends.png`                       Daily mean PM2.5 at the three
-                                                stations
+### Daily PM2.5 Trends
+![Daily PM2.5 Trends](./Results/figures/Daily_PM25.png)
 
-  `Daily_PM10_Trends.png`                       Daily mean PM10 at the three
-                                                stations
+### Daily PM10 Trends
+![Daily PM10 Trends](./Results/figures/Daily_PM10.png)
 
-  `Hourly_Pollution_Trends.png`                 Hourly PM2.5 and PM10 time series
-                                                by station
+### Hourly Pollution Trends
+![Hourly Pollution Trends](./Results/figures/Hourly_Stations.png)
 
-  `Hourly_PM25_PM10_Trends.png`                 Additional hourly particulate trend
-                                                visualisation
+### Land Cover Distribution
+![Land Cover Distribution](./Results/figures/LULC_Distribution.png)
 
-  `Station_Wise_Pollution_Comparison.png`       Mean PM2.5 and PM10 comparison by
-                                                station
+### Pollutant Distributions
+![Pollutant Distributions](./Results/figures/Pollutant_Distributions.png)
 
-  `Pollutant_Distributions_by_Station.png`      Boxplots of PM2.5 and PM10
-                                                distributions
+### Station Comparison
+![Station Comparison](./Results/figures/Station_Comparison.png)
 
-  `Pollution_Weather_Correlation_Heatmap.png`   Station-wise Spearman
-                                                pollutant--weather correlations
+### Weather Correlation Heatmap
+![Weather Correlation Heatmap](./Results/figures/Weather_Correlation_Heatmap.png)
 
-  `Wind_Direction_Distribution.png`             Frequency of wind directions
-
-  `LULC_Percentage_Distribution.png`            Land-cover class percentages within
-                                                the 5 km study area
-  ---------------------------------------------------------------------------------
-
-### Tables
-
-  --------------------------------------------------------------------------------------
-  Table                                              What it contains
-  -------------------------------------------------- -----------------------------------
-  `Daily_Pollution_Summary.csv`                      Daily pollutant means and valid
-                                                     counts
-
-  `Station_Wise_Pollution_Means.csv`                 Mean PM2.5, PM10 and NO2 by station
-
-  `Station_Wise_Spearman_Weather_Correlations.csv`   Station-wise Spearman correlations,
-                                                     including sample sizes
-
-  `Wind_Direction_Frequency.csv`                     Number of non-calm observations in
-                                                     each wind sector
-
-  `Pollution_by_Wind_Direction.csv`                  Station-wise pollutant summaries by
-                                                     wind sector
-  --------------------------------------------------------------------------------------
+### Wind Direction Distribution
+![Wind Direction Distribution](./Results/figures/Wind_Distribution.png)
 
 The GIS deliverables include the 5 km study boundary, station locations,
 WorldCover raster and land-cover map, DEM, slope, hillshade,
